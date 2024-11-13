@@ -134,18 +134,18 @@ Use Prisma ORM to design the following schema, ensuring each table uses UUID as 
 
    #### Response:
    ```
-        {
-            "success": true,
-            "status": 200,
-            "message": "Book updated successfully",
-            "data": {
-                "bookId": "a24df67b-1234-5678-9101-b2a3c5d7f9b1",
-                "title": "To Kill a Mockingbird - Revised",
-                "genre": "Classic Fiction",
-                "publishedYear": 1961,
-                "totalCopies": 12,
-                availableCopies": 8
-        }
+    {
+      "success": true,
+      "status": 200,
+      "message": "Book updated successfully",
+      "data": {
+        "bookId": "a24df67b-1234-5678-9101-b2a3c5d7f9b1",
+        "title": "To Kill a Mockingbird - Revised",
+        "genre": "Classic Fiction",
+        "publishedYear": 1961,
+        "totalCopies": 12,
+        availableCopies": 8
+      }
 }
    ```
      

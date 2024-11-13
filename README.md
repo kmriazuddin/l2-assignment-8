@@ -1,64 +1,16 @@
-Here's a comprehensive `README.md` file for your Library Management System API project.
+# Library Management System
+### Objective:
+PostgreSql is a relational database management system, Using object-oriented features of PostgreSQL.  its reliability, flexibility, and support of open technical standards.
 
-```markdown
-# Library Management System API
-
-A backend API built with Node.js, Express.js, Prisma ORM, PostgreSQL, and TypeScript for managing library resources including books, members, and borrowing activities. This API allows library staff and members to perform CRUD operations on books, members, and borrow records, along with additional endpoints for borrowing and returning books. UUIDs are used for unique identification across all tables.
-
-## Table of Contents
-
-- [Technologies](#technologies)
-- [Installation](#installation)
-- [Database Schema](#database-schema)
-- [Features & Endpoints](#features--endpoints)
-  - [Book CRUD Operations](#book-crud-operations)
-  - [Member CRUD Operations](#member-crud-operations)
-  - [Borrow & Return Books](#borrow--return-books)
-- [License](#license)
-
-## Technologies
-
-- **Node.js**: JavaScript runtime environment.
-- **Express.js**: Web framework for Node.js.
-- **Prisma ORM**: Type-safe ORM for database management.
-- **PostgreSQL**: Relational database.
-- **TypeScript**: Strongly typed programming language for scalable applications.
-
-## Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/your-username/library-management-system.git
-   cd library-management-system
-   ```
-
-2. **Install dependencies**
-   ```bash
-   yarn install
-   ```
-
-3. **Set up the PostgreSQL database**
-   - Create a PostgreSQL database.
-   - Configure the database connection in `.env`:
-     ```env
-     DATABASE_URL="postgresql://username:password@localhost:5432/library_db"
-     ```
-
-4. **Run Prisma migrations**
-   ```bash
-   npx prisma migrate dev --name init
-   ```
-
-5. **Start the server**
-   ```bash
-   yarn start
-   ```
-
-6. **Access the API** at `http://localhost:3000/api`.
+### Technologies Required
+- Prisma ORM
+- Node.js
+- PostgreSQL
+- Express.js
+- TypeScript
 
 ## Database Schema Requirements
-
-This project includes three main tables with the following schema definitions using UUID as primary keys.
+Use Prisma ORM to design the following schema, ensuring each table uses UUID as a primary key:
 
 ### 1. Book Table
 

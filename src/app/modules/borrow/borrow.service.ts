@@ -30,7 +30,10 @@ const overdueBook = async () => {
     const overDueDay = Math.abs(
       14 -
         Math.floor(
-          new Date(book.returnDate - book.borrowDate) / (1000 * 60 * 60 * 24)
+          (new Date(
+            book.returnDate.getTime() - book.borrowDate.getTime()
+          ) as any) /
+            (1000 * 60 * 60 * 24)
         )
     );
     if (overDueDay > 0) {

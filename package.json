@@ -4,11 +4,16 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev --respawn --transpile-only src/server.ts"
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "prod": "NODE_ENV=production node ./dist/server.js",
+    "build": "tsc",
+    "postinstall": "prisma generate",
+    "vercel-build": "echo hello"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",
+    "@types/http-status": "^1.1.2",
     "@types/node": "^22.9.0",
     "prisma": "^5.22.0",
     "ts-node": "^10.9.2",
@@ -17,10 +22,9 @@
   },
   "dependencies": {
     "@prisma/client": "^5.22.0",
-    "@types/http-status": "^1.1.2",
     "cors": "^2.8.5",
     "express": "^4.21.1",
-    "http-status": "^2.0.0",
+    "http-status": "^1.7.4",
     "moment": "^2.30.1"
   }
 }

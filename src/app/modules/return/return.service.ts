@@ -1,3 +1,4 @@
+import httpStatus from "http-status";
 import { prisma } from "../../config/prisma";
 import AppError from "../../utils/appError";
 

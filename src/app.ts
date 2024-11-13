@@ -7,7 +7,7 @@ app.use(cors());
 
 app.get("/", (req: Request, res: Response) => {
   res.send({
-    Message: "LMS Server...",
+    Message: "LMS Server Is Running...",
   });
 });
 

@@ -56,30 +56,41 @@ A backend API built with Node.js, Express.js, Prisma ORM, PostgreSQL, and TypeSc
 
 6. **Access the API** at `http://localhost:3000/api`.
 
-## Database Schema
+## Database Schema Requirements
 
-Using Prisma, this project includes three main tables:
-1. **Book Table**
-   - `bookId` (UUID): Unique identifier for each book.
-   - `title` (String): Title of the book.
-   - `genre` (String): Genre or category of the book.
-   - `publishedYear` (Int): Year the book was published.
-   - `totalCopies` (Int): Total copies of the book in the library.
-   - `availableCopies` (Int): Number of copies currently available.
+This project includes three main tables with the following schema definitions using UUID as primary keys.
 
-2. **Member Table**
-   - `memberId` (UUID): Unique identifier for each member.
-   - `name` (String): Name of the library member.
-   - `email` (String): Member’s email (unique).
-   - `phone` (String): Member’s contact number.
-   - `membershipDate` (DateTime): Date the member joined.
+### 1. Book Table
 
-3. **BorrowRecord Table**
-   - `borrowId` (UUID): Unique identifier for each borrow record.
-   - `borrowDate` (DateTime): Date when the book was borrowed.
-   - `returnDate` (DateTime): Date when the book was returned (nullable).
-   - `bookId` (UUID): Foreign key referencing `Book`.
-   - `memberId` (UUID): Foreign key referencing `Member`.
+| Field           | Type   | Description                                   |
+|-----------------|--------|-----------------------------------------------|
+| `bookId`        | UUID   | Unique identifier for each book               |
+| `title`         | String | Title of the book                             |
+| `genre`         | String | Genre or category of the book                 |
+| `publishedYear` | Int    | Year the book was published                   |
+| `totalCopies`   | Int    | Total copies of the book in the library       |
+| `availableCopies` | Int  | Number of copies currently available for borrowing |
+
+### 2. Member Table
+
+| Field            | Type     | Description                                 |
+|------------------|----------|---------------------------------------------|
+| `memberId`       | UUID     | Unique identifier for each member           |
+| `name`           | String   | Name of the library member                  |
+| `email`          | String   | Member’s email (unique)                     |
+| `phone`          | String   | Member’s contact number                     |
+| `membershipDate` | DateTime | Date the member joined the library          |
+
+### 3. BorrowRecord Table
+
+| Field        | Type     | Description                                     |
+|--------------|----------|-------------------------------------------------|
+| `borrowId`   | UUID     | Unique identifier for each borrow record        |
+| `borrowDate` | DateTime | Date when the book was borrowed                 |
+| `returnDate` | DateTime | Date when the book was returned (nullable)      |
+| `bookId`     | UUID     | Foreign key referencing Book                    |
+| `memberId`   | UUID     | Foreign key referencing Member                  |
+
 
 ## Features & Endpoints
 

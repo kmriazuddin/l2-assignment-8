@@ -1,4 +1,6 @@
 # Library Management System
+
+
 ### Objective:
 PostgreSql is a relational database management system, Using object-oriented features of PostgreSQL.  its reliability, flexibility, and support of open technical standards.
 
@@ -137,12 +139,3 @@ Use Prisma ORM to design the following schema, ensuring each table uses UUID as 
        "borrowId": "a24df67b-1234-5678-9101-b2a3c5d7f"
      }
      ```
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-```
-
----
-
-This `README.md` provides an overview of the Library Management System API, instructions for setup and running the project, the database schema, and descriptions of all endpoints with example requests and responses.
